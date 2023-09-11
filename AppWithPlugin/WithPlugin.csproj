@@ -6,6 +6,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\..\dbjcore\dbjcore.csproj" />
     <ProjectReference Include="..\PluginBase\PluginBase.csproj" />
   </ItemGroup>
 

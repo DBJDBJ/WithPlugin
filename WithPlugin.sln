@@ -17,6 +17,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FrenchPlugin", "FrenchPlugi
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UVPlugin", "UVPlugin\UVPlugin.csproj", "{B8698156-310C-471E-A957-58A118954BB5}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "dbjcore", "..\dbjcore\dbjcore.csproj", "{6BD8C3E5-4872-4E00-9486-B17F8B78E5E5}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -51,6 +53,10 @@ Global
 		{B8698156-310C-471E-A957-58A118954BB5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B8698156-310C-471E-A957-58A118954BB5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B8698156-310C-471E-A957-58A118954BB5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6BD8C3E5-4872-4E00-9486-B17F8B78E5E5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6BD8C3E5-4872-4E00-9486-B17F8B78E5E5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6BD8C3E5-4872-4E00-9486-B17F8B78E5E5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6BD8C3E5-4872-4E00-9486-B17F8B78E5E5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

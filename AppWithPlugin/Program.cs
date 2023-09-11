@@ -5,6 +5,8 @@ using System.IO;
 using System.Linq;
 using System.Reflection;
 
+using static dbjcore.DBJLog;
+
 namespace AppWithPlugin
 {
     class Program
@@ -36,32 +38,32 @@ namespace AppWithPlugin
 
                 if (args.Length == 0)
                 {
-                    Console.WriteLine("Commands: ");
+                    info("Commands: ");
                     foreach (ICommand command in commands)
                     {
-                        Console.WriteLine($"{command.Name}\t - {command.Description}");
+                        info($"{command.Name}\t - {command.Description}");
                     }
                 }
                 else
                 {
                     foreach (string commandName in args)
                     {
-                        Console.WriteLine($"-- {commandName} --");
+                        info($"-- {commandName} --");
                         ICommand command = commands.FirstOrDefault(c => c.Name == commandName);
                         if (command == null)
                         {
-                            Console.WriteLine("No such command is known.");
+                            fatal("No such command is known.");
                             return;
                         }
 
                         command.Execute();
-                        Console.WriteLine();
+                        info($"Executed -- {commandName} --");
                     }
                 }
             }
             catch (Exception ex)
             {
-                Console.WriteLine(ex);
+                fatal(ex.Message);
             }
         }
 
@@ -76,7 +78,7 @@ namespace AppWithPlugin
                                 Path.GetDirectoryName(typeof(Program).Assembly.Location)))))));
 
             string pluginLocation = Path.GetFullPath(Path.Combine(root, relativePath.Replace('\\', Path.DirectorySeparatorChar)));
-            Console.WriteLine($"Loading commands from: {pluginLocation}");
+            debug($"Loading commands from: {pluginLocation}");
             PluginLoadContext loadContext = new PluginLoadContext(pluginLocation);
             return loadContext.LoadFromAssemblyName(AssemblyName.GetAssemblyName(pluginLocation));
         }
