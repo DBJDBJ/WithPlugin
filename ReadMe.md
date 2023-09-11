@@ -1,13 +1,3 @@
----
-languages:
-- csharp
-products:
-- dotnet
-page_type: sample
-name: "AppWithPlugin Demo"
-urlFragment: "appwithplugin-demo"
-description: "A sample that demonstrates creating an app with plugins in .NET"
----
 
 # AppWithPlugin Demo
 
